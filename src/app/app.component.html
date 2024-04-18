@@ -1,0 +1,43 @@
+<h1 class="text-center mt-2">Currency Convertor</h1>
+<div class="container">
+  <div class="row my-3">
+    <div class="col-md-4 offset-md-2">
+      <div class="form-group">
+        <label for="">
+          <strong class="font">
+            From :-
+          </strong>
+        </label>
+        <select [(ngModel)]="basecurrency" class="form-control">
+          <option [value]="curr" *ngFor="let curr of currencyCode" class="form-control">
+            {{curr}}</option>
+        </select>
+        <input type="number" class="form-control my-3" [(ngModel)]="amount">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="">
+          <strong class="font">
+            To :-
+          </strong>
+        </label>
+        <select name="" id="" [(ngModel)]="targetCurrency" class="form-control">
+          <option [value]="curr" *ngFor="let curr of currencyCode" class="form-control">
+            {{curr}}
+          </option>
+        </select>
+        <input type="text" class="form-control my-3" [(ngModel)]="result">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <button class="btn btn-info alert-info" (click)="convertCurrency()">
+        <strong>
+          Convert
+        </strong>
+      </button>
+    </div>
+  </div>
+</div>
